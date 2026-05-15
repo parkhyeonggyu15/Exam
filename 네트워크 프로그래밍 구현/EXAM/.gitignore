@@ -1,0 +1,25 @@
+# 빌드 산출물
+bin/
+out/
+build/
+*.class
+
+# JDBC Driver (각자 다운로드)
+lib/*.jar
+
+# DB 접속 정보 (보안 - 절대 커밋 금지)
+config/db.properties
+
+# Eclipse 메타파일은 커밋함 (학생 import 편의 — .project / .classpath / .settings/)
+
+# 다른 IDE
+.idea/
+.vscode/
+*.iml
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Logs
+*.log

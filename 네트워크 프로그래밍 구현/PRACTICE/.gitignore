@@ -1,0 +1,11 @@
+bin/
+out/
+*.class
+lib/*.jar
+config/db.properties
+.idea/
+.vscode/
+*.iml
+Thumbs.db
+.DS_Store
+*.log

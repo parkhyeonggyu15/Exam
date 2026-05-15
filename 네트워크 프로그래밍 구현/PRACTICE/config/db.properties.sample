@@ -1,0 +1,18 @@
+# [PRACTICE / 메모 공유 시스템] MySQL JDBC 접속 정보 템플릿
+# 사용법: 본 파일을 db.properties 로 복사한 뒤 본인 환경에 맞게 수정
+#         (db.properties 는 .gitignore 로 커밋되지 않음)
+#
+# db/schema.sql 을 그대로 실행했다면 아래 user/password 그대로 사용 가능:
+#   user=memouser / password=memo1234!
+
+db.driver=com.mysql.cj.jdbc.Driver
+db.url=jdbc:mysql://localhost:3306/MemoDB?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+db.user=memouser
+db.password=memo1234!
+
+# ──────────────────────────────────────────────
+# 💡 allowPublicKeyRetrieval=true 가 필요한 이유:
+#    MySQL 8.x 의 기본 인증 플러그인 caching_sha2_password 가
+#    비밀번호 암호화에 서버 공개키를 요구하기 때문.
+#    이 옵션이 없으면 "Public Key Retrieval is not allowed" 에러 발생.
+# ──────────────────────────────────────────────
